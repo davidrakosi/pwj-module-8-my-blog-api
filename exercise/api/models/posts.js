@@ -9,7 +9,10 @@ class Posts {
 
     getIndividualBlog(postId) {
         // get one blog post
-        const currentPosts = this.readData();
+        const posts = this.readData();
+        const foundPost = posts.find((post) => post.id == postId )
+        console.log(foundPost)
+        return foundPost
     }
 
     add(newPost) {
